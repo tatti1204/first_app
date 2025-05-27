@@ -1,0 +1,33 @@
+<div class="homepage">
+  <header class="hero">
+    <h1>ようこそ！</h1>
+    <p class="subtitle">簡単なホームページです</p>
+  </header>
+
+  <main class="content">
+    <section class="welcome">
+      <h2>このサイトについて</h2>
+      <p>これは First App のホームページです。シンプルで使いやすいウェブサイトを目指しています。</p>
+    </section>
+
+    <section class="features">
+      <h2>機能</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>投稿機能</h3>
+          <p>投稿を作成・表示できます</p>
+          <%= link_to "投稿を見る", posts_path, class: "btn btn-primary" %>
+        </div>
+        <div class="feature-card">
+          <h3>新規投稿</h3>
+          <p>新しい投稿を作成できます</p>
+          <%= link_to "新規投稿", posts_new_path, class: "btn btn-secondary" %>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2023 First App. All rights reserved.</p>
+  </footer>
+</div>
