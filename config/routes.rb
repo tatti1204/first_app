@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   
   get 'calculator', to: 'calculator#index'
   post 'calculator/add', to: 'calculator#add'
+  
+  get 'automotive_research', to: 'automotive_research#index'
 end
