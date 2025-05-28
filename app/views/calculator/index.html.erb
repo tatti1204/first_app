@@ -1,0 +1,28 @@
+<div class="calculator-container">
+  <h1>足し算アプリ</h1>
+  
+  <%= form_with url: calculator_add_path, method: :post, local: true do |form| %>
+    <div class="form-group">
+      <%= form.label :number1, "数字1" %>
+      <%= form.number_field :number1, value: @number1, step: :any, class: "form-control", required: true %>
+    </div>
+    
+    <div class="form-group">
+      <%= form.label :number2, "数字2" %>
+      <%= form.number_field :number2, value: @number2, step: :any, class: "form-control", required: true %>
+    </div>
+    
+    <div class="form-group">
+      <%= form.submit "計算する", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  
+  <% if @result.present? %>
+    <div class="result-section">
+      <h2>結果</h2>
+      <p class="result">
+        <%= @number1 %> + <%= @number2 %> = <strong><%= @result %></strong>
+      </p>
+    </div>
+  <% end %>
+</div>
